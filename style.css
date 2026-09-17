@@ -1,0 +1,24 @@
+body {
+  background-color: #282828;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.btn {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #ffffff;
+  color: #282828;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.box {
+  margin: 8px;
+  padding: 8px;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+}
