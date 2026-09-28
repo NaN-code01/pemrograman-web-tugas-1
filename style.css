@@ -1,24 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  background-color: #282828;
-  color: #FFFFFF;
-  font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    background-color: #282828;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.btn {
-  display: inline-block;
-  padding: 4px 8px;
-  background: #ffffff;
-  color: #282828;
-  border-radius: 8px;
-  border: none;
-  text-decoration: none;
-  font-family: inherit;
-  font-weight: bold;
+
+/* Bagian utama */
+main {
+    min-height: 80vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
+
+/* Judul halaman */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* FLEXBOX */
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+/* Kotak anggota */
 .box {
-  margin: 8px;
-  padding: 8px;
-  border: 2px solid #FFFFFF;
-  border-radius: 8px;
+    width: 45%;
+    padding: 25px;
+    border: 2px solid white;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #333333;
+}
+
+.box h3 {
+    margin-bottom: 20px;
+}
+
+
+/* Tombol */
+.btn {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* Halaman profil */
+.profile-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #333333;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+.profile-card h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* FLEXBOX untuk informasi profil */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px;
+    border-bottom: 1px solid #777777;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #202020;
+}
+
+
+/* MEDIA QUERY UNTUK HP */
+@media screen and (max-width: 768px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    /* Kotak menjadi satu kolom */
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    /* Profil lebih kecil di HP */
+    .profile-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Data profil ditumpuk */
+    .profile-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .profile-item span {
+        word-break: break-word;
+    }
+
+}
+
+
+/* MEDIA QUERY HP KECIL */
+@media screen and (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 23px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .box {
+        padding: 20px 15px;
+    }
+
+    .profile-card h1 {
+        font-size: 24px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+
 }
